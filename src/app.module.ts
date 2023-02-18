@@ -9,11 +9,11 @@ import { UsersModule } from './users/users.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'host.docker.internal',
       port: 3306,
       username: 'test',
       password: 'password',
-      database: 'tsksdb',
+      database: 'tododb',
       autoLoadEntities: true,
       synchronize: true,
     }),

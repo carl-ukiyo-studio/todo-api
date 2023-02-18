@@ -7,11 +7,11 @@ import { User } from './user.entity';
 @Injectable()
 export class UsersService {
   create(createUserDto: CreateUserDto): Promise<User> {
-	  const user = new User();
-	  user.firstName = createUserDto.firstName;
-	  user.lastName = createUserDto.lastName;
+    const user = new User();
+    user.firstName = createUserDto.firstName;
+    user.lastName = createUserDto.lastName;
 
-	  return this.usersRepository.save(user);
+    return this.usersRepository.save(user);
   }
   constructor(
     @InjectRepository(User) private usersRepository: Repository<User>,
